@@ -17,6 +17,7 @@ class PaintWidget(Widget):
                 Rectangle(pos=(0+i*50, 0), size=(1, 700))
             for i in range(15):
                 Rectangle(pos=(0, 0+i*50), size=(1000, 1))
+
             Color(0, 1, 0, 1)
             Rectangle(pos=(0, 350), size=(1000, 1))
             Rectangle(pos=(500, 0), size=(1, 700))
@@ -24,6 +25,20 @@ class PaintWidget(Widget):
                 Rectangle(pos=(0+i*50, 345), size=(1, 10))
             for i in range(15):
                 Rectangle(pos=(495, 0+i*50), size=(10, 1))
+
+            Color(1, 1, 1, 1)
+            a = 2
+            b = 2
+            c = 3
+            k1 = 0
+            k2 = 0
+            while a*k1**2-k1*b-c <= 7:
+                Rectangle(pos=(k1 * 50 + 500, (a * k1 ** 2 - k1 * b - c) * 50 + 350), size=(1, 1))
+                k1 += 0.005
+            while a * k2 ** 2 - k2 * b - c <= 7:
+                Rectangle(pos=(k2 * 50 + 500, (a * k2 ** 2 - k2 * b - c) * 50 + 350), size=(1, 1))
+                k2 -= 0.005
+
 
 class Main(App):
 
